@@ -112,15 +112,18 @@ function App() {
       <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/95 backdrop-blur-xl border-b border-white/10 py-2 md:py-3' : 'bg-transparent py-3 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <div className="flex items-center gap-2 md:gap-3 min-w-0">
-            <img 
-              src="/images/client-logo.png" 
-              alt="Zen Technologies Logo" 
-              className="h-8 md:h-10 w-auto object-contain flex-shrink-0"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
-            />
+          <img 
+  src="/images/client-logo.png" 
+  alt="Zen Technologies Logo" 
+  className="h-8 md:h-10 w-auto object-contain flex-shrink-0 bg-black/50 rounded-lg p-1"
+  onError={(e) => {
+    e.target.src = ""; // Prevents infinite error loop
+    e.target.style.display = 'none';
+    // Look for the fallback div and show it
+    const fallback = e.target.nextSibling;
+    if(fallback) fallback.style.display = 'flex';
+  }}
+/>
             <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/20 hidden">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
@@ -464,13 +467,17 @@ function App() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
               <img 
-                src="/images/client-logo.png" 
-                alt="Zen Technologies Logo" 
-                className="h-6 sm:h-8 w-auto object-contain"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                }}
-              />
+  src="/images/client-logo.png" 
+  alt="Zen Technologies Logo" 
+  className="h-8 md:h-10 w-auto object-contain flex-shrink-0 bg-black/50 rounded-lg p-1"
+  onError={(e) => {
+    e.target.src = ""; // Prevents infinite error loop
+    e.target.style.display = 'none';
+    // Look for the fallback div and show it
+    const fallback = e.target.nextSibling;
+    if(fallback) fallback.style.display = 'flex';
+  }}
+/>
               <span className="font-bold text-white text-sm sm:text-base">Zen Technologies</span>
               <span className="text-white/50 text-[10px] sm:text-xs">© 2025 Ethiopia. All rights reserved.</span>
             </div>
