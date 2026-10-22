@@ -55,51 +55,52 @@ function App() {
   ];
 
   const clientLogos = [
-    { name: 'Zen Technologies', file: 'client-logo.png', hasImage: true },
     { name: 'EthioPOS', emoji: '🍽️', hasImage: false },
     { name: 'PharmaTrace', emoji: '💊', hasImage: false },
     { name: 'Coffee Trace', emoji: '🌱', hasImage: false },
     { name: 'FILI Trading', emoji: '🏢', hasImage: false },
+    { name: 'Addis Restaurant Group', emoji: '🍴', hasImage: false },
   ];
 
   const testimonials = [
-  { 
-    name: 'Amanuel Gebre', 
-    role: 'Owner', 
-    company: 'Addis Ababa Restaurant Group', 
-    content: 'Zen Technologies built our complete POS system. Now we manage 5 restaurants from one dashboard. Sales increased by 45%!', 
-    rating: 5, 
-    image: `https://ui-avatars.com/api/?name=Amanuel+Gebre&background=F97316&color=fff&size=100&rounded=true&bold=true`
-  },
-  { 
-    name: 'Tigist Haile', 
-    role: 'Operations Manager', 
-    company: 'Pharma Ethiopia PLC', 
-    content: 'The pharmaceutical traceability system is EFDA compliant and saved us countless hours. Highly professional team!', 
-    rating: 5, 
-    image: `https://ui-avatars.com/api/?name=Tigist+Haile&background=F97316&color=fff&size=100&rounded=true&bold=true`
-  },
-  { 
-    name: 'Dawit Mekonnen', 
-    role: 'Export Manager', 
-    company: 'FILI Coffee Exporters', 
-    content: 'From farm to export, our coffee is now fully traceable. International buyers love the transparency!', 
-    rating: 5, 
-    image: `https://ui-avatars.com/api/?name=Dawit+Mekonnen&background=F97316&color=fff&size=100&rounded=true&bold=true`
-  },
-];
+    { 
+      name: 'Amanuel Gebre', 
+      role: 'Owner', 
+      company: 'Addis Ababa Restaurant Group', 
+      content: 'Amanuel built our complete POS system. Now we manage 5 restaurants from one dashboard. Sales increased by 45%!', 
+      rating: 5, 
+      image: `https://ui-avatars.com/api/?name=Amanuel+Gebre&background=F97316&color=fff&size=100&rounded=true&bold=true`
+    },
+    { 
+      name: 'Tigist Haile', 
+      role: 'Operations Manager', 
+      company: 'Pharma Ethiopia PLC', 
+      content: 'The pharmaceutical traceability system is EFDA compliant and saved us countless hours. Highly professional developer!', 
+      rating: 5, 
+      image: `https://ui-avatars.com/api/?name=Tigist+Haile&background=F97316&color=fff&size=100&rounded=true&bold=true`
+    },
+    { 
+      name: 'Dawit Mekonnen', 
+      role: 'Export Manager', 
+      company: 'FILI Coffee Exporters', 
+      content: 'From farm to export, our coffee is now fully traceable. International buyers love the transparency!', 
+      rating: 5, 
+      image: `https://ui-avatars.com/api/?name=Dawit+Mekonnen&background=F97316&color=fff&size=100&rounded=true&bold=true`
+    },
+  ];
+
   const stats = [
-    { value: '15+', label: 'Projects Completed', suffix: '' },
+    { value: '15+', label: 'Projects Delivered', suffix: '' },
     { value: '100%', label: 'Client Satisfaction', suffix: '' },
-    { value: '5+', label: 'Active Systems', suffix: '' },
-    { value: '24/7', label: 'Technical Support', suffix: '' },
+    { value: '5+', label: 'Live Systems', suffix: '' },
+    { value: '24/7', label: 'Support', suffix: '' },
   ];
 
   const faqs = [
     { q: 'How long does a typical project take?', a: 'Most websites take 3-5 weeks. Restaurant POS systems take 6-8 weeks. Traceability systems take 8-12 weeks depending on complexity.' },
-    { q: 'Do you offer maintenance after launch?', a: 'Yes! We offer monthly maintenance plans including hosting, security updates, backups, and 24/7 support.' },
-    { q: 'Can you integrate with Ethiopian regulations?', a: 'Absolutely. We specialize in EFDA compliance, tax systems, and local business requirements.' },
-    { q: 'What is your payment structure?', a: 'We typically require 40% upfront, 30% at milestone, and 30% upon completion. Special terms for enterprise clients.' },
+    { q: 'Do you offer maintenance after launch?', a: 'Yes! I offer monthly maintenance plans including hosting, security updates, backups, and 24/7 support.' },
+    { q: 'Can you integrate with Ethiopian regulations?', a: 'Absolutely. I specialize in EFDA compliance, tax systems, and local business requirements.' },
+    { q: 'What is your payment structure?', a: 'I typically require 40% upfront, 30% at milestone, and 30% upon completion. Special terms for enterprise clients.' },
   ];
 
   const scrollToProjects = () => {
@@ -112,22 +113,10 @@ function App() {
       <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/95 backdrop-blur-xl border-b border-white/10 py-2 md:py-3' : 'bg-transparent py-3 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <div className="flex items-center gap-2 md:gap-3 min-w-0">
-          <img 
-  src="/images/client-logo.png" 
-  alt="Zen Technologies Logo" 
-  className="h-8 md:h-10 w-auto object-contain flex-shrink-0 bg-black/50 rounded-lg p-1"
-  onError={(e) => {
-    e.target.src = ""; // Prevents infinite error loop
-    e.target.style.display = 'none';
-    // Look for the fallback div and show it
-    const fallback = e.target.nextSibling;
-    if(fallback) fallback.style.display = 'flex';
-  }}
-/>
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/20 hidden">
-              <span className="text-white font-bold text-xl">Z</span>
+            <div className="w-9 h-9 md:w-10 md:h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20 flex-shrink-0">
+              <span className="text-white font-bold text-sm md:text-base tracking-tight">AY</span>
             </div>
-            <span className="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent truncate">Zen Technologies</span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent truncate">Amanuel Yohannes</span>
           </div>
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {['Work', 'Services', 'Pricing'].map(item => (
@@ -137,7 +126,7 @@ function App() {
               onClick={() => window.open('https://t.me/anamyoha', '_blank')}
               className="bg-gradient-to-r from-orange-500 to-amber-600 text-white px-4 lg:px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
             >
-              Book Consult
+              Hire Me
             </button>
           </div>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white p-1 -mr-2">
@@ -153,7 +142,7 @@ function App() {
               onClick={() => window.open('https://t.me/anamyoha', '_blank')}
               className="bg-gradient-to-r from-orange-500 to-amber-600 text-white px-6 py-2 rounded-full"
             >
-              Book Consult
+              Hire Me
             </button>
           </div>
         )}
@@ -172,13 +161,13 @@ function App() {
                   <span className="animate-ping absolute h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                   <span className="relative rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
-                <span className="text-xs sm:text-sm text-white/90 font-medium">Ethiopian Tech Agency</span>
+                <span className="text-xs sm:text-sm text-white/90 font-medium">Full-Stack Developer • Addis Ababa</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6 bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent">
-                Digital Solutions <br className="hidden sm:block" />for Ethiopian Business
+                Digital Products <br className="hidden sm:block" />Built for Ethiopian Business
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0 font-medium">
-                We build restaurant POS systems, pharmaceutical traceability platforms, and complete digital ecosystems that drive real revenue.
+                I'm Amanuel Yohannes — I build restaurant POS systems, pharmaceutical traceability platforms, and complete digital ecosystems that drive real revenue.
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
                 <button 
@@ -213,7 +202,7 @@ function App() {
       {/* Trust Section with Client Logos */}
       <section className="py-10 md:py-16 border-y border-white/10 bg-black/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <p className="text-center text-white/60 text-xs sm:text-sm uppercase tracking-wider mb-6 md:mb-8 font-medium">Trusted by Ethiopian businesses</p>
+          <p className="text-center text-white/60 text-xs sm:text-sm uppercase tracking-wider mb-6 md:mb-8 font-medium">Businesses I've built for</p>
           
           {/* Client Logos */}
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
@@ -254,7 +243,7 @@ function App() {
       <section id="services" className="py-16 md:py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Comprehensive Digital Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Services I Offer</h2>
             <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto px-4 font-medium">Everything you need to dominate your market, from restaurant POS to pharmaceutical traceability.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
@@ -276,7 +265,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Featured Projects</h2>
-            <p className="text-white/70 text-sm sm:text-base font-medium">Live systems deployed for Ethiopian businesses</p>
+            <p className="text-white/70 text-sm sm:text-base font-medium">Live systems I've designed and deployed for Ethiopian businesses</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, i) => (
@@ -309,8 +298,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Why Ethiopian businesses choose Zen Technologies</h2>
-              <p className="text-white/70 text-sm sm:text-base mb-6 md:mb-8 font-medium">We understand local regulations, business needs, and deliver solutions that work in Ethiopia.</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Why Ethiopian businesses work with me</h2>
+              <p className="text-white/70 text-sm sm:text-base mb-6 md:mb-8 font-medium">I understand local regulations and business needs, and I deliver solutions that actually work in Ethiopia.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
                 {['EFDA Compliant', '24/7 Local Support', 'Clean Code', 'Scalable Systems'].map((feat, i) => (
                   <div key={i} className="flex gap-3 sm:gap-4 items-start">
@@ -343,7 +332,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Trusted by Ethiopian industry leaders</h2>
-            <p className="text-white/70 text-sm sm:text-base font-medium">What our clients say about their digital transformation</p>
+            <p className="text-white/70 text-sm sm:text-base font-medium">What my clients say about their digital transformation</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((t, i) => (
@@ -404,7 +393,7 @@ function App() {
                 onClick={() => window.open('https://t.me/anamyoha', '_blank')}
                 className="w-full py-2.5 sm:py-3 rounded-full border border-white/30 text-white font-semibold text-sm sm:text-base hover:bg-white/10 transition-all"
               >
-                Contact Sales
+                Contact Me
               </button>
             </div>
           </div>
@@ -445,10 +434,10 @@ function App() {
               <Phone size={16} /> <span className="hidden xs:inline">Call:</span> +251 911 936 923
             </button>
             <button 
-              onClick={() => window.location.href = 'mailto:info@zentech.com'}
+              onClick={() => window.location.href = 'mailto:hello@amanuelyohannes.com'}
               className="border border-white/30 text-white px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg flex items-center gap-2 hover:bg-white/10 transition-all"
             >
-              <Mail size={16} /> <span className="hidden xs:inline">info@zentech.com</span>
+              <Mail size={16} /> <span className="hidden xs:inline">hello@amanuelyohannes.com</span>
             </button>
             <button 
               onClick={() => window.open('https://t.me/anamyoha', '_blank')}
@@ -466,20 +455,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-              <img 
-  src="/images/client-logo.png" 
-  alt="Zen Technologies Logo" 
-  className="h-8 md:h-10 w-auto object-contain flex-shrink-0 bg-black/50 rounded-lg p-1"
-  onError={(e) => {
-    e.target.src = ""; // Prevents infinite error loop
-    e.target.style.display = 'none';
-    // Look for the fallback div and show it
-    const fallback = e.target.nextSibling;
-    if(fallback) fallback.style.display = 'flex';
-  }}
-/>
-              <span className="font-bold text-white text-sm sm:text-base">Zen Technologies</span>
-              <span className="text-white/50 text-[10px] sm:text-xs">© 2025 Ethiopia. All rights reserved.</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-xs">AY</span>
+              </div>
+              <span className="font-bold text-white text-sm sm:text-base">Amanuel Yohannes</span>
+              <span className="text-white/50 text-[10px] sm:text-xs">© 2025 Amanuel Yohannes. All rights reserved.</span>
             </div>
             <div className="flex gap-4 sm:gap-6">
               <a href="https://www.instagram.com/anamyoha" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-orange-400 transition-colors text-xs sm:text-sm font-medium">Instagram</a>
