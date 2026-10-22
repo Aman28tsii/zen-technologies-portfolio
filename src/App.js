@@ -434,10 +434,10 @@ function App() {
               <Phone size={16} /> <span className="hidden xs:inline">Call:</span> +251 911 936 923
             </button>
             <button 
-              onClick={() => window.location.href = 'mailto:hello@amanuelyohannes.com'}
+              onClick={() => window.location.href = 'mailto:amanuelyohannes2828@gmail.com'}
               className="border border-white/30 text-white px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg flex items-center gap-2 hover:bg-white/10 transition-all"
             >
-              <Mail size={16} /> <span className="hidden xs:inline">hello@amanuelyohannes.com</span>
+              <Mail size={16} /> <span className="hidden xs:inline">amanuelyohannes2828@gmail.com</span>
             </button>
             <button 
               onClick={() => window.open('https://t.me/anamyoha', '_blank')}
